@@ -3,7 +3,7 @@
     "jsx": "react",
     "module": "commonjs",
     "strict": true,
-    "target": "es6"
+    "target": "es5"
   },
   "exclude": [
     "node_modules"

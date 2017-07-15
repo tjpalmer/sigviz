@@ -3,7 +3,6 @@ let webpack = require('webpack');
 module.exports = {
   entry: {
     app: './src/main.tsx',
-    vendor: ['react', 'react-dom'],
   },
   output: {filename: "app.js"},
   module: {
@@ -14,9 +13,8 @@ module.exports = {
       },
     ],
   },
-  plugins: [
-    new webpack.optimize.CommonsChunkPlugin({
-      name: 'vendor', filename: 'vendor.js',
-    }),
-  ],
+  devServer: {
+    hot: false,
+    inline: false,
+  },
 };
