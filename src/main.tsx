@@ -1,15 +1,10 @@
-import {React} from './';
-
-function yo(strings: TemplateStringsArray, ...keys: any[]) {
-  console.log(strings, keys);  
-}
+import {React} from './index';
 
 function init() {
   console.log('Hi!');
   let name = 'world';
   console.log(<Hello name={name}><Hello>Inside!</Hello></Hello>);
-  console.log(<div>Hi</div>);
-  console.log(yo`<Hello name=${name}><Hello>\more</Hello></Hello>`);
+  console.log(<div class='that'>Hi</div>);
   let hi = new Hello();
   hi.hi();
   // ReactDOM.render(<h1>Hello, {name}!</h1>, document.getElementById('root'));

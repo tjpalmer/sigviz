@@ -17,6 +17,9 @@ module.exports = {
     ],
   },
   output: {filename: "app.js"},
+  plugins: [
+    new webpack.optimize.ModuleConcatenationPlugin(),
+  ],
   resolve: {
     extensions: ['.js', '.ts', '.tsx'],
   },
