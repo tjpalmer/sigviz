@@ -1,31 +1,12 @@
-// import {createElement, Component, render} from 'rax';
-// import {Text} from 'rax-text';
-// import * as React from 'react';
-// import * as ReactDOM from 'react-dom';
-
-let React = {
-  createElement(type: Function | string, props: any, content: any) {
-    console.log('createElement', type, props, content);
-    return [type, props, content];
-  }
-};
-
-declare namespace JSX {
-  type Element = any;
-  interface IntrinsicElements {
-    div: any;
-  }
-}
+import {React} from './';
 
 function yo(strings: TemplateStringsArray, ...keys: any[]) {
   console.log(strings, keys);  
 }
 
-// console.log(Text);
-
 function init() {
   console.log('Hi!');
-  let name = 'Tom';
+  let name = 'world';
   console.log(<Hello name={name}><Hello>Inside!</Hello></Hello>);
   console.log(<div>Hi</div>);
   console.log(yo`<Hello name=${name}><Hello>\more</Hello></Hello>`);

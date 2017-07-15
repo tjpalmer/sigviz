@@ -1,10 +1,13 @@
 let webpack = require('webpack');
 
 module.exports = {
+  devServer: {
+    hot: false,
+    inline: false,
+  },
   entry: {
     app: './src/main.tsx',
   },
-  output: {filename: "app.js"},
   module: {
     loaders: [
       {
@@ -13,8 +16,8 @@ module.exports = {
       },
     ],
   },
-  devServer: {
-    hot: false,
-    inline: false,
+  output: {filename: "app.js"},
+  resolve: {
+    extensions: ['.js', '.ts', '.tsx'],
   },
 };
