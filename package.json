@@ -6,10 +6,7 @@
     "type": "git",
     "url": "about:blank"
   },
-  "dependencies": {
-    "rax": "^0.4.4",
-    "rax-text": "^0.4.4"
-  },
+  "dependencies": {},
   "devDependencies": {
     "awesome-typescript-loader": "^3.2.1",
     "typescript": "^2.4.1",

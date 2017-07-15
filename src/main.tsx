@@ -1,30 +1,35 @@
-import {createElement, Component, render} from 'rax';
-import {Text} from 'rax-text';
+// import {createElement, Component, render} from 'rax';
+// import {Text} from 'rax-text';
 
-let React = {createElement};
+let React = {
+  createElement(type: Function, props: any) {
+    console.log('createElement', type, props);
+  }
+};
 
-console.log(Text);
+declare namespace JSX {
+  type Element = any;
+}
+
+// console.log(Text);
 
 function init() {
   console.log('Hi!');
-  render(<Hello name="world" />);
+  (<Hello name="world"/>);
 }
 
-class Hello extends Component {
+class Hello {
   render() {
-    return [
-      <Text style={styles.title}>Hello Rax</Text>,
-      <Text style={styles.title}>Hello {this.props.name}</Text>,
-    ];
+    console.log('render!');
   }
 }
 
-const styles = {
-  title: {
-    color: '#ff4400',
-    fontSize: 48,
-    fontWeight: 'bold',
-  }
-};
+// const styles = {
+//   title: {
+//     color: '#ff4400',
+//     fontSize: 48,
+//     fontWeight: 'bold',
+//   }
+// };
 
 window.addEventListener('load', init);
