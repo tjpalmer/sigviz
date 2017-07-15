@@ -31,7 +31,7 @@ function init() {
   console.log(yo`<Hello name=${name}><Hello>\more</Hello></Hello>`);
   let hi = new Hello();
   hi.hi();
-  ReactDOM.render(<h1>Hello, world!</h1>, document.getElementById('root'));
+  ReactDOM.render(<h1>Hello, {name}!</h1>, document.getElementById('root'));
 }
 
 class Hello {
