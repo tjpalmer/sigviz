@@ -2,13 +2,13 @@ let webpack = require('webpack');
 
 module.exports = {
   entry: {
-    app: './src/main.ts',
+    app: './src/main.tsx',
   },
   output: {filename: "app.js"},
   module: {
     loaders: [
       {
-        test: /\.ts$/,
+        test: /\.ts$|\.tsx$/,
         loader: 'awesome-typescript-loader',
       },
     ],
