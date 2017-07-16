@@ -4,7 +4,7 @@ function init() {
   console.log('Hi!');
   let name = 'world';
   let clazz = 'that<>""';
-  console.log(<Hello name={name}><Hello>Inside!</Hello> More</Hello>);
+  console.log(<Hi name={name}><Hello>Inside!</Hello> More</Hi>);
   console.log();
   let hi = new Hello();
   hi.hi();
@@ -14,14 +14,24 @@ function init() {
   );
 }
 
+type Props = {
+  age?: number;
+}
+
 class Hello {
   hi = () => console.log('Hi from', this);
-  props: {
+  props: Props & {
     name?: string;
   };
   render() {
     console.log('render!');
   }
+}
+
+class Hi extends Hello {
+  props: Hello['props'] & {
+    color?: string;
+  };
 }
 
 // const styles = {
